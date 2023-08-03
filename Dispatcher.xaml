@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="933,2482" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="933,2624" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -88,7 +88,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="710,2417" sap2010:WorkflowViewState.IdRef="Sequence_15">
+  <Sequence DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="730,2559" sap2010:WorkflowViewState.IdRef="Sequence_15">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_path" />
       <Variable x:TypeArguments="x:String" Name="str_sheetname" />
@@ -98,16 +98,16 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="648,141" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Dispatcher  started&quot;]" />
-    <Sequence DisplayName="Fetching the Assets" sap:VirtualizedContainerService.HintSize="648,81" sap2010:WorkflowViewState.IdRef="Sequence_16">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="668,92" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;TLD Retreaver Dispatcher started&quot;]" />
+    <Sequence DisplayName="Fetching the Assets" sap:VirtualizedContainerService.HintSize="668,565" sap2010:WorkflowViewState.IdRef="Sequence_16">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,141" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Fetching the assets&quot;]" />
-      <ui:GetRobotAsset AssetName="Dispatcher_ExcelDetails" CacheStrategy="None" DisplayName="Get Asset : Dispatcher_ExcelDetails" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot;Fetching the assets&quot;]" />
+      <ui:GetRobotAsset AssetName="Dispatcher_ExcelDetails" CacheStrategy="None" DisplayName="Get Asset : Dispatcher_ExcelDetails" sap:VirtualizedContainerService.HintSize="388,141" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
         <ui:GetRobotAsset.TimeoutMS>
           <InArgument x:TypeArguments="x:Int32" />
         </ui:GetRobotAsset.TimeoutMS>
@@ -121,7 +121,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:GetRobotAsset>
-      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Dispatcher_Excelsheetname" CacheStrategy="None" DisplayName="Get Asset : Dispatcher_Excelsheetname" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Dispatcher_Excelsheetname" CacheStrategy="None" DisplayName="Get Asset : Dispatcher_Excelsheetname" sap:VirtualizedContainerService.HintSize="388,141" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
         <ui:GetRobotAsset.Value>
           <OutArgument x:TypeArguments="x:String">[str_sheetname]</OutArgument>
         </ui:GetRobotAsset.Value>
@@ -133,7 +133,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:GetRobotAsset>
     </Sequence>
-    <Sequence DisplayName="Reading the excel and adding the data into queue" sap:VirtualizedContainerService.HintSize="648,1823" sap2010:WorkflowViewState.IdRef="Sequence_17">
+    <Sequence DisplayName="Reading the excel and adding the data into queue" sap:VirtualizedContainerService.HintSize="668,1579" sap2010:WorkflowViewState.IdRef="Sequence_17">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt" />
       </Sequence.Variables>
@@ -142,29 +142,29 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="586,141" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Reading the &quot; + str_sheetname]" />
-      <ui:ReadRange AddHeaders="True" DataTable="[dt]" DisplayName="Read Range Workbook : Sheet1" sap:VirtualizedContainerService.HintSize="586,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[str_sheetname]" WorkbookPath="[str_path]">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="606,92" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Reading the &quot; + str_sheetname]" />
+      <ui:ReadRange AddHeaders="True" DataTable="[dt]" DisplayName="Read Range Workbook : Sheet1" sap:VirtualizedContainerService.HintSize="606,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[str_sheetname]" WorkbookPath="[str_path]">
         <ui:ReadRange.Range>
           <InArgument x:TypeArguments="x:String">
             <Literal x:TypeArguments="x:String" Value="" />
           </InArgument>
         </ui:ReadRange.Range>
       </ui:ReadRange>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="586,1403" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="606,1208" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1217" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="572,1091" sap2010:WorkflowViewState.IdRef="Sequence_18">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[Convert.ToDateTime(Row(&quot;Last Success Exceution Date&quot;).ToString) &lt;&gt; Today]" sap:VirtualizedContainerService.HintSize="510,1129" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[Convert.ToDateTime(Row(&quot;Last Success Exceution Date&quot;).ToString) &lt;&gt; Today]" sap:VirtualizedContainerService.HintSize="510,980" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="476,947" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <Sequence sap:VirtualizedContainerService.HintSize="476,798" sap2010:WorkflowViewState.IdRef="Sequence_19">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="str_reference" />
                     </Sequence.Variables>
@@ -181,15 +181,15 @@
                         <InArgument x:TypeArguments="x:String">[Row.Item("Process").ToString + "_" + Now.ToString("yyyyMMddhhmm")]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[str_reference]" />
-                    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item : TLD_RETREAVER" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="TLD_RETREAVER" Reference="[str_reference]">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[str_reference]" />
+                    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item : TLD_RETREAVER" sap:VirtualizedContainerService.HintSize="434,192" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="TLD_RETREAVER" Reference="[str_reference]">
                       <ui:AddQueueItem.ItemInformation>
                         <InArgument x:TypeArguments="x:String" x:Key="date">[Row.Item("Last Success Exceution Date").ToString]</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="process">[Row.Item("Process").ToString]</InArgument>
                       </ui:AddQueueItem.ItemInformation>
                     </ui:AddQueueItem>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[Row.Item(&quot;Last Success Exceution Date&quot;).ToString + &quot; :  added to queue&quot;]" />
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[Row.Item(&quot;Process&quot;).ToString + &quot; : added to queue&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[Row.Item(&quot;Last Success Exceution Date&quot;).ToString + &quot; :  added to queue&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[Row.Item(&quot;Process&quot;).ToString + &quot; : added to queue&quot;]" />
                   </Sequence>
                 </If.Then>
                 <If.Else>
@@ -201,6 +201,6 @@
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="648,141" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Dispatcher ended&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="668,92" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[&quot;TLD Retreaver dispatcher ended&quot;]" />
   </Sequence>
 </Activity>
